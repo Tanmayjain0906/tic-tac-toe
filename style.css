@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200&family=Poppins:wght@300&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.enter-name-container {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.container
+{
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.enter-name-container>h1, h3 {
+    color: black;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.start-game {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.start-game>input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+    border: 1px solid black;
+}
+
+.start-game>button {
+    width: 100px;
+    align-self: center;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    background-color: aqua;
+    color: black;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+#game-btn:hover {
+    transform: scale(1.05);
+    background-color: rgba(0, 255, 255, 0.384);
+    color: white;
+}
+
+.game-grid
+{
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    
+    
+}
+
+.box
+{
+    border: 2px solid black;
+    text-align: center;
+    font-size: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'DM Sans', sans-serif;
+    border-radius: 4px;
+}
+
+.bl
+{
+    border-left: none;
+}
+
+.bt
+{
+    border-top: none;
+}
+
+.br
+{
+    border-right: none;
+}
+
+.bb
+{
+    border-bottom: none;
+}
+
+.box:hover
+{
+    background-color: rgba(80, 80, 79, 0.096);
+}
+
+.button-container
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 20vw;
+}
+
+.clear
+{
+    width: 100px;
+    align-self: center;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.clear:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 0, 0, 0.315);
+    color: black;
+}
+
+
+.reset
+{
+    width: 100px;
+    align-self: center;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    background-color: rgb(34, 155, 34);
+    color: white;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.reset:hover {
+    transform: scale(1.05);
+    background-color: rgba(34, 155, 34, 0.363);
+    color: black;
+}
