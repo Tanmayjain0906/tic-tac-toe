@@ -35,12 +35,16 @@
     align-items: center;
 }
 
-.enter-name-container>h1, h3 {
+.enter-name-container>{
     color: black;
     font-family: 'DM Sans', sans-serif;
     font-size: 50px;
 }
-
+h1, h3
+{
+    color: black;
+    font-family: 'DM Sans', sans-serif;
+}
 .start-game {
     display: flex;
     flex-direction: column;
@@ -51,7 +55,7 @@
     padding: 5px;
     border-radius: 5px;
     border: none;
-    width: 400px;
+    width: 350px;
     border: 1px solid black;
 }
 
