@@ -79,6 +79,8 @@ clearbtn.addEventListener("click", () => {
     modal.style.display = "flex";
     container.style.display= "none";
     turnText = "X";
+    player1 = "";
+    player2 = "";
 })
 
  function checkWin()

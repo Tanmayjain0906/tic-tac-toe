@@ -38,6 +38,7 @@
 .enter-name-container>h1, h3 {
     color: black;
     font-family: 'DM Sans', sans-serif;
+    font-size: 50px;
 }
 
 .start-game {
@@ -50,12 +51,12 @@
     padding: 5px;
     border-radius: 5px;
     border: none;
-    width: 200px;
+    width: 400px;
     border: 1px solid black;
 }
 
 .start-game>button {
-    width: 100px;
+    width: 300px;
     align-self: center;
     border: none;
     padding-top: 5px;
@@ -70,7 +71,7 @@
 #game-btn:hover {
     transform: scale(1.05);
     background-color: rgba(0, 255, 255, 0.384);
-    color: white;
+    color: black;
 }
 
 .game-grid
