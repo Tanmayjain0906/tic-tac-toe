@@ -6,6 +6,7 @@ let isGameOver = false;
 
 let enter = new Audio("enter.mp3");
 let gameWon = new Audio("won.mp3");
+let gameOver = new Audio("error.mp3");
 
 let container = document.getElementsByClassName("container")[0];
 
@@ -121,7 +122,7 @@ clearbtn.addEventListener("click", () => {
    {
     turn.innerHTML = "Oops! No one won. Try again!";
     turn.style.color = "red";
-    
+    gameOver.play();
    }
  }
 
