@@ -14,7 +14,7 @@ let clearbtn = document.getElementsByClassName("clear")[0];
 
 let boxes = document.getElementsByClassName("box");
 
-
+let count = 0;
 
 let whichTurn;
 let turn = document.getElementsByClassName("turn")[0];
@@ -33,6 +33,8 @@ startBtn.addEventListener("submit", (e)=>{
    turn.innerHTML = whichTurn + " your Turn";
    modal.style.display= "none";
    container.style.display= "flex";
+   turn.style.color = "black";
+   count = 0;
 })
 
 
@@ -55,6 +57,7 @@ Array.from(boxes).forEach((element) => {
         {
             element.innerHTML = turnText;
             changeTurn();
+            count++;
             checkWin();
             enter.play();
         }
@@ -72,6 +75,8 @@ clearbtn.addEventListener("click", () => {
     turnText = "X";
     whichTurn = `${player1}`;
     turn.innerHTML = whichTurn + " your Turn";
+    turn.style.color = "black";
+    count = 0;
  })
 
  resetbtn.addEventListener("click", ()=>
@@ -81,6 +86,8 @@ clearbtn.addEventListener("click", () => {
     turnText = "X";
     player1 = "";
     player2 = "";
+    turn.style.color = "black";
+    count = 0;
 })
 
  function checkWin()
@@ -101,6 +108,7 @@ clearbtn.addEventListener("click", () => {
     {
         whichTurn = whichTurn === `${player1}`?`${player2}`:`${player1}`;
         turn.innerHTML = whichTurn + " you won";
+        turn.style.color = "green";
         isGameOver = true;
         boxes[e[0]].style.backgroundColor = "green";
         boxes[e[1]].style.backgroundColor = "green";
@@ -108,6 +116,13 @@ clearbtn.addEventListener("click", () => {
         gameWon.play();
     }
    })
+
+   if(count === 9 && isGameOver === false)
+   {
+    turn.innerHTML = "Oops! No one won. Try again!";
+    turn.style.color = "red";
+    
+   }
  }
 
 
